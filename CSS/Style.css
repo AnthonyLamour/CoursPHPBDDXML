@@ -1,0 +1,63 @@
+﻿/*modification du CSS des objets body*/
+body {
+    /*mise en place d'un background issu d'une image*/
+    background: url(../Images/MainBackground.png) fixed no-repeat center;
+    /*modification de la taille du background pour remplir l'écran*/
+    background-size: 100% 100%;
+    /*alignement du text au centre*/
+    text-align: center;
+    /*marge 0*/
+    margin: 0;
+    /*marge basse 7% de la hauteur*/
+    margin-bottom: 7vh;
+}
+
+/*modification du CSS des objets footer*/
+footer {
+    /*position fixe*/
+    position: fixed;
+    /*position en bas à droite de l'écran*/
+    right: 0;
+    bottom: 0;
+    /*set de la couleur du texte en blanc*/
+    color: white;
+    /*alignement du text à droite*/
+    text-align: right;
+    /*border haute blache solide de 2 pixels*/
+    border-top: solid 2px white;
+    /*couleur de background noire*/
+    background-color: black;
+    /*épaisseur 100%*/
+    width: 100%;
+    /*marge basse 0*/
+    margin-bottom: 0;
+    /*taille 5% de la hauteur de la page*/
+    height: 5vh;
+}
+
+/*modification du CSS des objets d'id MainNav*/
+#MainNav {
+    /*épaisseur de 50%*/
+    width: 50%;
+    /*marge gauche et droite de 25%*/
+    margin-left: 25%;
+    margin-right: 25%;
+    /*bordure blanche inset 5px*/
+    border: inset 5px white;
+    /*couleur de fond noire*/
+    background-color: black;
+    /*couleur du text blanche*/
+    color: white;
+    /*marge haute*/
+    margin-top: 5vh;
+    /*marge basse*/
+    margin-bottom: 10vh;
+    /*hauteur 80% de la taille de la page*/
+    height: 80vh;
+}
+
+/*modification du CSS des liens de class navLink*/
+.navLink:link {
+    /*couleur blanche*/
+    color: white;
+}
