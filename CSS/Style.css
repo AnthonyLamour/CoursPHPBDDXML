@@ -12,6 +12,15 @@ body {
     margin-bottom: 7vh;
 }
 
+/*modification du CSS des objets h1 et h3*/
+h1, h3 {
+    /*soulignage du texte*/
+    text-decoration: underline;
+    /*modification de la couleur en blanc*/
+    color: white;
+}
+
+
 /*modification du CSS des objets footer*/
 footer {
     /*position fixe*/
@@ -60,4 +69,21 @@ footer {
 .navLink:link {
     /*couleur blanche*/
     color: white;
+}
+
+/*modification du CSS des objets nav*/
+nav {
+    /*position fixe*/
+    position: fixed;
+    /*en haut a gauche*/
+    top: 0;
+    left: 0;
+    /*bordure solide de 2 pixels blanche*/
+    border: solid 2px white;
+    /*couleur de background noire*/
+    background-color: black;
+    /*épaisseur de 15%*/
+    width: 10%;
+    /*padding de 15 pixels*/
+    padding: 15px;
 }
