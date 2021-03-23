@@ -23,7 +23,9 @@
         <!--lien vers la page d'accauil-->
         <a href="index.html" class="navLink" >Acceuil</a><br/>
 		<!--lien vers la page d'ajout dans une BDD depuis un XML-->
-        <a href="AjoutBDDXML.php" class="navLink" >Ajout dans une BDD depuis XML</a>
+        <a href="AjoutBDDXML.php" class="navLink" >Ajout dans une BDD depuis XML</a><br/>
+		<!--lien vers la page de création de JSON depuis du JS-->
+        <a href="CreerJSONavecJS.html" class="navLink" >Création de JSON depuis JS</a>
     </nav>
     
     <!--titre de la page-->
@@ -322,6 +324,11 @@
         $document->save("Uniter_DOM.xml");
     ?>
 
+	<!--footer-->
+    <footer>
+        <!--paragraphe de footer-->
+        <p>Anthony LAMOUR étudiant en Master 2 à Ludus Académie</p>
+    </footer>
 </body>
 
 </html>

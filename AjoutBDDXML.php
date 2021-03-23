@@ -23,7 +23,9 @@
         <!--lien vers la page d'accauil-->
         <a href="index.html" class="navLink" >Acceuil</a><br/>
         <!--lien vers la page de création de XML depuis une BDD-->
-        <a href="CreerXMLDepuisBDD.php" class="navLink" >Création d'XML depuis une BDD</a>
+        <a href="CreerXMLDepuisBDD.php" class="navLink" >Création d'XML depuis une BDD</a><br/>
+        <!--lien vers la page de création de JSON depuis du JS-->
+        <a href="CreerJSONavecJS.html" class="navLink" >Création de JSON depuis JS</a>
     </nav>
     
     <!--titre de la page-->
@@ -163,6 +165,12 @@
         echo"</table>";
         echo"</div>";
     ?>
+    
+    <!--footer-->
+    <footer>
+        <!--paragraphe de footer-->
+        <p>Anthony LAMOUR étudiant en Master 2 à Ludus Académie</p>
+    </footer>
 
 </body>
 

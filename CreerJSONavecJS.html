@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<!--head de la page-->
+<head>
+    <!--encodage de la page-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--titre de la page-->
+    <title>JSON depuis JS</title>
+    <!--lien vers le CSS de la page-->
+    <link rel="stylesheet" href="CSS/Style.css" />
+    <!--icone de la page-->
+    <link rel="icon" href="Images/icone.png">
+</head>
+
+<!--contenu de la page-->
+<body>
+    <!--menu de navigation entre les pages-->
+    <nav>
+        <!--titre du menu de navigation-->
+        <h3>Menu de navigation :</h3>
+        <!--lien vers la page d'accauil-->
+        <a href="index.html" class="navLink">Acceuil</a><br />
+        <!--lien vers la page de création de XML depuis une BDD-->
+        <a href="CreerXMLDepuisBDD.php" class="navLink">Création d'XML depuis une BDD</a><br />
+        <!--lien vers la page d'ajout dans une BDD depuis un XML-->
+        <a href="AjoutBDDXML.php" class="navLink">Ajout dans une BDD depuis XML</a>
+    </nav>
+
+    <script>
+        var Unit = '{ "Units" : ['+
+                   '{ "NOM":"Silas" , "DATEDENAISSANCE":"0000-11-01" , "NOMCLASSE":"Cavalier"},'+
+                   '{ "NOM":"Xander" , "DATEDENAISSANCE":"0000-10-27" , "NOMCLASSE":"Paladin"},'+
+                   '{ "NOM":"Camilla" , "DATEDENAISSANCE":"0000-11-30" , "NOMCLASSE":"Lord wyvern"},'+
+                   '{ "NOM":"Leo" , "DATEDENAISSANCE":"0000-06-30" , "NOMCLASSE":"Paladin noir"},'+
+                   '{ "NOM":"Elise" , "DATEDENAISSANCE":"0000-03-19" , "NOMCLASSE":"Troubadour"}]}';
+        var UnitJSON = JSON.stringify(Unit);
+        var file = new File(UnitJSON, "Unit.json");
+    </script>
+
+    <!--footer-->
+    <footer>
+        <!--paragraphe de footer-->
+        <p>Anthony LAMOUR étudiant en Master 2 à Ludus Académie</p>
+    </footer>
+</body>
+
+</html>
