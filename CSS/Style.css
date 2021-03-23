@@ -87,3 +87,24 @@ nav {
     /*padding de 15 pixels*/
     padding: 15px;
 }
+
+.TextCadre {
+    display: inline-block;
+    width: 15vw;
+    height: 10vh;
+    border: solid white 1px;
+    background-color: black;
+    color: white;
+}
+
+#TabArme {
+    margin-left:42.5vw;
+}
+
+#TabClasse {
+    margin-left: 12.5vw;
+}
+
+#TabUnit {
+    margin-left: 27.5vw;
+}

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Ajouts>
+  <ARME>
+    <NOMARME type="string">Dague</NOMARME>
+  </ARME>
+  <CLASSE>
+    <NOMCLASSE type="string">Domestique</NOMCLASSE>
+    <WEAPON_A type="string">Dague</WEAPON_A>
+    <WEAPON_B type="string">Bâton</WEAPON_B>
+    <MAX_LEVEL type="int">40</MAX_LEVEL>
+  </CLASSE>
+  <CLASSE>
+    <NOMCLASSE type="string">Majordome</NOMCLASSE>
+    <WEAPON_A type="string">Dague</WEAPON_A>
+    <WEAPON_B type="string">Bâton</WEAPON_B>
+    <MAX_LEVEL type="int">40</MAX_LEVEL>
+  </CLASSE>
+  <UNIT>
+    <NOM type="string">Felicia</NOM>
+    <DATEDENAISSANCE type="string">0000-02-19</DATEDENAISSANCE>
+    <NOMCLASSE type="string">Domestique</NOMCLASSE>
+  </UNIT>
+  <UNIT>
+    <NOM type="string">Jakob</NOM>
+    <DATEDENAISSANCE type="string">0000-12-03</DATEDENAISSANCE>
+    <NOMCLASSE type="string">Majordome</NOMCLASSE>
+  </UNIT>
+</Ajouts>

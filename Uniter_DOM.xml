@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf8"?>
+<Unites>
+  <Unite id="2">
+    <IdUnit>2</IdUnit>
+    <Nom>Chrom</Nom>
+    <Date_de_naissance>0000-05-27</Date_de_naissance>
+    <Nom_classe>Lord</Nom_classe>
+    <Weapon_A>Epée</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="3">
+    <IdUnit>3</IdUnit>
+    <Nom>Lissa</Nom>
+    <Date_de_naissance>0000-03-06</Date_de_naissance>
+    <Nom_classe>Soeur</Nom_classe>
+    <Weapon_A>Bâton</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="4">
+    <IdUnit>4</IdUnit>
+    <Nom>Frederick</Nom>
+    <Date_de_naissance>0000-08-26</Date_de_naissance>
+    <Nom_classe>Grand chevalier</Nom_classe>
+    <Weapon_A>Epée</Weapon_A>
+    <Weapon_B>Lance</Weapon_B>
+    <Weapon_C>Hache</Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="5">
+    <IdUnit>5</IdUnit>
+    <Nom>Sully</Nom>
+    <Date_de_naissance>0000-12-05</Date_de_naissance>
+    <Nom_classe>Cavalier</Nom_classe>
+    <Weapon_A>Epée</Weapon_A>
+    <Weapon_B>Lance</Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="6">
+    <IdUnit>6</IdUnit>
+    <Nom>Virion</Nom>
+    <Date_de_naissance>0000-12-10</Date_de_naissance>
+    <Nom_classe>Archer</Nom_classe>
+    <Weapon_A>Arc</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="7">
+    <IdUnit>7</IdUnit>
+    <Nom>Stahl</Nom>
+    <Date_de_naissance>0000-06-16</Date_de_naissance>
+    <Nom_classe>Cavalier</Nom_classe>
+    <Weapon_A>Epée</Weapon_A>
+    <Weapon_B>Lance</Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="8">
+    <IdUnit>8</IdUnit>
+    <Nom>Vaike</Nom>
+    <Date_de_naissance>0000-12-26</Date_de_naissance>
+    <Nom_classe>Combattant</Nom_classe>
+    <Weapon_A>Hache</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="9">
+    <IdUnit>9</IdUnit>
+    <Nom>Miriel</Nom>
+    <Date_de_naissance>0000-02-12</Date_de_naissance>
+    <Nom_classe>Mage</Nom_classe>
+    <Weapon_A>Tome</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="10">
+    <IdUnit>10</IdUnit>
+    <Nom>Sumia</Nom>
+    <Date_de_naissance>0000-11-24</Date_de_naissance>
+    <Nom_classe>Chevalier pégase</Nom_classe>
+    <Weapon_A>Lance</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="11">
+    <IdUnit>11</IdUnit>
+    <Nom>Kellam</Nom>
+    <Date_de_naissance>0000-06-24</Date_de_naissance>
+    <Nom_classe>Chevalier</Nom_classe>
+    <Weapon_A>Lance</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="12">
+    <IdUnit>12</IdUnit>
+    <Nom>Donnel</Nom>
+    <Date_de_naissance>0000-06-04</Date_de_naissance>
+    <Nom_classe>Villageois</Nom_classe>
+    <Weapon_A>Lance</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>30</Max_level>
+  </Unite>
+  <Unite id="13">
+    <IdUnit>13</IdUnit>
+    <Nom>Lon'zu</Nom>
+    <Date_de_naissance>0000-10-10</Date_de_naissance>
+    <Nom_classe>Epéiste</Nom_classe>
+    <Weapon_A>Epée</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="14">
+    <IdUnit>14</IdUnit>
+    <Nom>Ricken</Nom>
+    <Date_de_naissance>0000-05-23</Date_de_naissance>
+    <Nom_classe>Mage</Nom_classe>
+    <Weapon_A>Tome</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="15">
+    <IdUnit>15</IdUnit>
+    <Nom>Maribelle</Nom>
+    <Date_de_naissance>0000-04-14</Date_de_naissance>
+    <Nom_classe>Troubadour</Nom_classe>
+    <Weapon_A>Bâton</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="16">
+    <IdUnit>16</IdUnit>
+    <Nom>Palne</Nom>
+    <Date_de_naissance>0000-11-18</Date_de_naissance>
+    <Nom_classe>Tagüel</Nom_classe>
+    <Weapon_A>Bestipierre</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>30</Max_level>
+  </Unite>
+  <Unite id="17">
+    <IdUnit>17</IdUnit>
+    <Nom>Gaius</Nom>
+    <Date_de_naissance>0000-01-02</Date_de_naissance>
+    <Nom_classe>Voleur</Nom_classe>
+    <Weapon_A>Epée</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="18">
+    <IdUnit>18</IdUnit>
+    <Nom>Cordelia</Nom>
+    <Date_de_naissance>0000-07-07</Date_de_naissance>
+    <Nom_classe>Chevalier pégase</Nom_classe>
+    <Weapon_A>Lance</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="19">
+    <IdUnit>19</IdUnit>
+    <Nom>Gregor</Nom>
+    <Date_de_naissance>0000-01-27</Date_de_naissance>
+    <Nom_classe>Mercenaire</Nom_classe>
+    <Weapon_A>Epée</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="20">
+    <IdUnit>20</IdUnit>
+    <Nom>Nowi</Nom>
+    <Date_de_naissance>0000-09-21</Date_de_naissance>
+    <Nom_classe>Manakete</Nom_classe>
+    <Weapon_A>Dracopierre</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>30</Max_level>
+  </Unite>
+  <Unite id="21">
+    <IdUnit>21</IdUnit>
+    <Nom>Libra</Nom>
+    <Date_de_naissance>0000-07-01</Date_de_naissance>
+    <Nom_classe>Moine guerrier</Nom_classe>
+    <Weapon_A>Bâton</Weapon_A>
+    <Weapon_B>Hach</Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="22">
+    <IdUnit>22</IdUnit>
+    <Nom>Tharja</Nom>
+    <Date_de_naissance>0000-04-02</Date_de_naissance>
+    <Nom_classe>Mage noir</Nom_classe>
+    <Weapon_A>Tome</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="23">
+    <IdUnit>23</IdUnit>
+    <Nom>Anna</Nom>
+    <Date_de_naissance>0000-06-10</Date_de_naissance>
+    <Nom_classe>Baladin</Nom_classe>
+    <Weapon_A>Epée</Weapon_A>
+    <Weapon_B>Bâton</Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="24">
+    <IdUnit>24</IdUnit>
+    <Nom>Olivia</Nom>
+    <Date_de_naissance>0000-08-20</Date_de_naissance>
+    <Nom_classe>Danceur</Nom_classe>
+    <Weapon_A>Epée</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>30</Max_level>
+  </Unite>
+  <Unite id="25">
+    <IdUnit>25</IdUnit>
+    <Nom>Zelcher</Nom>
+    <Date_de_naissance>0000-10-17</Date_de_naissance>
+    <Nom_classe>Chevalier wyvern</Nom_classe>
+    <Weapon_A>Hache</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="26">
+    <IdUnit>26</IdUnit>
+    <Nom>Henry</Nom>
+    <Date_de_naissance>0000-11-13</Date_de_naissance>
+    <Nom_classe>Mage noir</Nom_classe>
+    <Weapon_A>Tome</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="27">
+    <IdUnit>27</IdUnit>
+    <Nom>Say'ri</Nom>
+    <Date_de_naissance>0000-01-11</Date_de_naissance>
+    <Nom_classe>Bretteur</Nom_classe>
+    <Weapon_A>Epée</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="28">
+    <IdUnit>28</IdUnit>
+    <Nom>Tiki</Nom>
+    <Date_de_naissance>0000-02-28</Date_de_naissance>
+    <Nom_classe>Manakete</Nom_classe>
+    <Weapon_A>Dracopierre</Weapon_A>
+    <Weapon_B></Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>30</Max_level>
+  </Unite>
+  <Unite id="29">
+    <IdUnit>29</IdUnit>
+    <Nom>Basilio</Nom>
+    <Date_de_naissance>0000-08-13</Date_de_naissance>
+    <Nom_classe>Guerrier</Nom_classe>
+    <Weapon_A>Hache</Weapon_A>
+    <Weapon_B>Arc</Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+  <Unite id="30">
+    <IdUnit>30</IdUnit>
+    <Nom>Flavia</Nom>
+    <Date_de_naissance>0000-10-28</Date_de_naissance>
+    <Nom_classe>Héro</Nom_classe>
+    <Weapon_A>Epée</Weapon_A>
+    <Weapon_B>Hache</Weapon_B>
+    <Weapon_C></Weapon_C>
+    <Max_level>20</Max_level>
+  </Unite>
+</Unites>

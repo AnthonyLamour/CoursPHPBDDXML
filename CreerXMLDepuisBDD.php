@@ -14,13 +14,16 @@
     <link rel="icon" href="Images/icone.png">
 </head>
 
+<!--contenu de la page-->
 <body>
     <!--menu de navigation entre les pages-->
     <nav>
         <!--titre du menu de navigation-->
         <h3>Menu de navigation :</h3>
         <!--lien vers la page d'accauil-->
-        <a href="index.php" class="navLink" >Acceuil</a>
+        <a href="index.html" class="navLink" >Acceuil</a><br/>
+		<!--lien vers la page d'ajout dans une BDD depuis un XML-->
+        <a href="AjoutBDDXML.php" class="navLink" >Ajout dans une BDD depuis XML</a>
     </nav>
     
     <!--titre de la page-->
@@ -316,5 +319,9 @@
             $lesUnites->appendChild($tmpUnit);
         }
         //save du fichier
-        $document->save("Unites_DOM.xml");
+        $document->save("Uniter_DOM.xml");
     ?>
+
+</body>
+
+</html>
