@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<!--head de la page-->
+<head>
+    <!--encodage de la page-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--titre de la page-->
+    <title>JSON depuis JS</title>
+    <!--lien vers le CSS de la page-->
+    <link rel="stylesheet" href="CSS/Style.css" />
+    <!--icone de la page-->
+    <link rel="icon" href="Images/icone.png">
+</head>
+
+<!--contenu de la page-->
+<body>
+    <!--menu de navigation entre les pages-->
+    <nav>
+        <!--titre du menu de navigation-->
+        <h3>Menu de navigation :</h3>
+        <!--lien vers la page d'accauil-->
+        <a href="index.html" class="navLink">Acceuil</a><br />
+        <!--lien vers la page de création de XML depuis une BDD-->
+        <a href="CreerXMLDepuisBDD.php" class="navLink">Création d'XML depuis une BDD</a><br />
+        <!--lien vers la page d'ajout dans une BDD depuis un XML-->
+        <a href="AjoutBDDXML.php" class="navLink">Ajout dans une BDD depuis XML</a>
+    </nav>
+
+    <h1>Réception de JSON</h1>
+
+    <div id="MainContent">
+
+    </div>
+
+
+    <script>
+        var MainContent = document.getElementById("MainContent");
+        var newTable = document.createElement("table");
+        
+        var xhr = new XMLHttpRequest();
+        var url = "Unite_JSON.json";
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json;charset=utf-8");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var json = JSON.parse(xhr.responseText);
+                for (var i = 0; i < json.Unites.length; i++) {
+                    var newLine = document.createElement("tr");
+                    var newCol = document.createElement("td");
+                    newCol.setAttribute("class", "ProfilPictureCadre");
+                    var newImage = document.createElement("img");
+                    newImage.setAttribute("class", "ProfilPicture");
+                    newImage.setAttribute("src", json.Unites[i].Profil_Picture);
+                    newCol.appendChild(newImage);
+                    newLine.appendChild(newCol);
+                    newCol = document.createElement("td");
+                    newCol.setAttribute("class", "TextCadre");
+                    newCol.innerHTML = json.Unites[i].Nom;
+                    newLine.appendChild(newCol);
+                    newCol = document.createElement("td");
+                    newCol.setAttribute("class", "TextCadre");
+                    newCol.innerHTML = json.Unites[i].Date_De_Naissance;
+                    newLine.appendChild(newCol);
+                    newCol = document.createElement("td");
+                    newCol.setAttribute("class", "TextCadre");
+                    newCol.innerHTML = json.Unites[i].Nom_classe;
+                    newLine.appendChild(newCol);
+                    newCol = document.createElement("td");
+                    newCol.setAttribute("class", "TextCadre");
+                    newCol.innerHTML = json.Unites[i].Weapon_A;
+                    newLine.appendChild(newCol);
+                    newCol = document.createElement("td");
+                    newCol.setAttribute("class", "TextCadre");
+                    newCol.innerHTML = json.Unites[i].Weapon_B;
+                    newLine.appendChild(newCol);
+                    newCol = document.createElement("td");
+                    newCol.setAttribute("class", "TextCadre");
+                    newCol.innerHTML = json.Unites[i].Weapon_C;
+                    newLine.appendChild(newCol);
+                    newCol = document.createElement("td");
+                    newCol.setAttribute("class", "TextCadre");
+                    newCol.innerHTML = json.Unites[i].Max_Level;
+                    newLine.appendChild(newCol);
+                    newTable.appendChild(newLine);
+                }
+                MainContent.appendChild(newTable);
+            }
+        };
+        xhr.send();
+    </script>
+
+    <!--footer-->
+    <footer>
+        <!--paragraphe de footer-->
+        <p>Anthony LAMOUR étudiant en Master 2 à Ludus Académie</p>
+    </footer>
+</body>
+
+</html>

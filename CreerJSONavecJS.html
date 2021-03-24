@@ -28,15 +28,130 @@
         <a href="AjoutBDDXML.php" class="navLink">Ajout dans une BDD depuis XML</a>
     </nav>
 
+    <h1>Création de JSON depuis du javascript</h1>
+
+    <fieldset id="MainFieldset">
+        <legend>
+            Formulaire de test JSON
+        </legend>
+        <form id="MainFormulaire" method="GET" action="ReceptionJSON">
+            <label for="Prenom">Prénom :</label>
+            <input type="text" id="Prenom" placeholder="Prénom" required />
+            <label for="Nom">Nom :</label>
+            <input type="text" id="Nom" placeholder="NOM" required />
+            <label for="Email">Email :</label>
+            <input type="email" id="Email" placeholder="prenom.nom@mail.com" required />
+            <label for="DateDeNaissance">Date de naissance :</label>
+            <input type="date" id="DateDeNaissance" required />
+            <label for="Age">Age :</label>
+            <input type="number" id="Age" placeholder="18" required />
+            <label for="AnimalPrefere">Animal préféré :</label>
+            <div id="AnimalPrefere">
+                <div class="RadioAndCheckOption">
+                    <input type="radio" id="Chien" name="AnimalPrefereChoisi" value="Chien" class="RadioAndCheck" checked />
+                    <label for="Chien">Chien</label>
+                </div>
+                <div class="RadioAndCheckOption">
+                    <input type="radio" id="Chat" name="AnimalPrefereChoisi" value="Chat" class="RadioAndCheck" />
+                    <label for="Chat">Chat</label>
+                </div>
+                <div class="RadioAndCheckOption">
+                    <input type="radio" id="Poisson" name="AnimalPrefereChoisi" value="Poisson" class="RadioAndCheck" />
+                    <label for="Poisson">Poisson</label>
+                </div>
+            </div>
+            <label for="CouleurPreferee">Couleur préférée :</label>
+            <select id="CouleurPreferee">
+                <option value="Vert">Vert</option>
+                <option value="Rouge">Rouge</option>
+                <option value="Jaune">Jaune</option>
+                <option value="Bleu">Bleu</option>
+            </select>
+            <label for="Support">Support possédé(s) :</label><br />
+            <div id="Support">
+                <div class="RadioAndCheckOption">
+                    <input type="checkbox" id="PC" class="RadioAndCheck" value="PC" checked />
+                    <label for="PC">PC</label>
+                </div>
+                <div class="RadioAndCheckOption">
+                    <input type="checkbox" id="Portable" value="Portable" class="RadioAndCheck" />
+                    <label for="Portable">Portable</label>
+                </div>
+                <div class="RadioAndCheckOption">
+                    <input type="checkbox" id="Playstation" value="Playstation" class="RadioAndCheck" />
+                    <label for="Playstation">Playstation</label>
+                </div>
+                <div class="RadioAndCheckOption">
+                    <input type="checkbox" id="Xbox" value="Xbox" class="RadioAndCheck" />
+                    <label for="Xbox">Xbox</label>
+                </div>
+                <div class="RadioAndCheckOption">
+                    <input type="checkbox" id="Nintendo" value="Nintendo" class="RadioAndCheck" />
+                    <label for="Nintendo">Nintendo</label>
+                </div>
+            </div>
+            <input type="button" id="Envoi" value="Valider" onclick="GenerateJSON()" />
+        </form>
+    </fieldset>
+
+
     <script>
-        var Unit = '{ "Units" : ['+
-                   '{ "NOM":"Silas" , "DATEDENAISSANCE":"0000-11-01" , "NOMCLASSE":"Cavalier"},'+
-                   '{ "NOM":"Xander" , "DATEDENAISSANCE":"0000-10-27" , "NOMCLASSE":"Paladin"},'+
-                   '{ "NOM":"Camilla" , "DATEDENAISSANCE":"0000-11-30" , "NOMCLASSE":"Lord wyvern"},'+
-                   '{ "NOM":"Leo" , "DATEDENAISSANCE":"0000-06-30" , "NOMCLASSE":"Paladin noir"},'+
-                   '{ "NOM":"Elise" , "DATEDENAISSANCE":"0000-03-19" , "NOMCLASSE":"Troubadour"}]}';
-        var UnitJSON = JSON.stringify(Unit);
-        var file = new File(UnitJSON, "Unit.json");
+        function GenerateJSON() {
+            var Nom=document.getElementById("Nom").value;
+            var Prenom=document.getElementById("Prenom").value;
+            var Email=document.getElementById("Email").value;
+            var DateDeNaissance=document.getElementById("DateDeNaissance").value;
+            var Age=document.getElementById("Age").value;
+            var AnimalPrefere;
+            if(document.getElementById("Chien").checked){
+                AnimalPrefere=document.getElementById("Chien").value;
+            }
+            else if(document.getElementById("Chat").checked){
+                AnimalPrefere=document.getElementById("Chat").value;
+            }
+            else if(document.getElementById("Poisson").checked){
+                AnimalPrefere=document.getElementById("Poisson").value;
+            }
+            var CouleurPreferee=document.getElementById("CouleurPreferee").value;
+            var Support= new Array;
+            if(document.getElementById("PC").checked){
+                Support.push(document.getElementById("PC").value);
+            }
+            if(document.getElementById("Portable").checked){
+                Support.push(document.getElementById("Portable").value);
+            }
+            if(document.getElementById("Playstation").checked){
+                Support.push(document.getElementById("Playstation").value);
+            }
+            if(document.getElementById("Xbox").checked){
+                Support.push(document.getElementById("Xbox").value);
+            }
+            if(document.getElementById("Nintendo").checked){
+                Support.push(document.getElementById("Nintendo").value);
+            }
+            var Personne = '{ "Personne" : [' +
+                           '{ "Nom":"' + Nom + '","Prenom":"' + Prenom + '","Email":"' + Email + '","DateDeNaissance":"' + DateDeNaissance + '","Age":"' + Age + '","AnimalPrefere":"' + AnimalPrefere + '","CouleurPreferee":"' + CouleurPreferee + '"';
+            for (var i = 0; i < Support.length; i++) {
+                Personne = Personne + ',"Support' + (i+1) + '":"' + Support[i] + '"';
+            }
+            Personne = Personne + '}]}';
+            var PersonneJSON = JSON.stringify(Personne);
+
+        }
+        
+        var xhr = new XMLHttpRequest();
+        var url = "CreerJSONavecJS.html";
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log(this.responseText);
+                var json = JSON.parse(xhr.responseText);
+                console.log(json.email + ", " + json.password);
+            }
+        };
+        var data = JSON.stringify({ "email": "hey@mail.com", "password": "101010" });
+        xhr.send(data);
     </script>
 
     <!--footer-->

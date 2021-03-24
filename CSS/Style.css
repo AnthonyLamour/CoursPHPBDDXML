@@ -90,13 +90,27 @@ nav {
 
 .TextCadre {
     display: inline-block;
-    width: 15vw;
+    width: 10vw;
     height: 10vh;
     border: solid white 1px;
     background-color: black;
     color: white;
 }
 
+.ProfilPictureCadre {
+    display: inline-block;
+    width: 10vw;
+    height: 10vh;
+    border: solid white 1px;
+    background-color: black;
+    color: white;
+}
+
+.ProfilPicture {
+    max-width: 7vw;
+    max-height: 7vh;
+    position: relative;
+}
 #TabArme {
     margin-left:42.5vw;
 }
@@ -107,4 +121,41 @@ nav {
 
 #TabUnit {
     margin-left: 27.5vw;
+}
+
+#MainFieldset{
+    width:50%;
+    margin-left:25%;
+    text-align:left;
+    background-color:black;
+    color:white;
+}
+
+input, select{
+    display:block;
+    margin-bottom:1vh;
+}
+
+.RadioAndCheck{
+    display:inline;
+}
+
+.RadioAndCheckOption {
+    display: block;
+}
+
+#AnimalPrefere{
+    margin-bottom:1vh;
+}
+
+#Support{
+    margin-bottom:1vh;
+}
+
+label{
+    margin-bottom:5px;
+}
+
+#MainContent{
+    margin-left:10vw;
 }
