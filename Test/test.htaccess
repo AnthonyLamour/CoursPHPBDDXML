@@ -1,0 +1,6 @@
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+RewriteRule ^(.*)\.php$ /$1 [L,R=301]
+
+#RewriteRule ^test-([0-9]+).php   /test.php?id=$1 [L]
