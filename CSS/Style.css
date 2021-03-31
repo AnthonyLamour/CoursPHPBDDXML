@@ -88,78 +88,125 @@ nav {
     padding: 15px;
 }
 
+/*modification du CSS des objets de class TextCadre*/
 .TextCadre {
+    /*mode de display inline block*/
     display: inline-block;
+    /*épaisseur 10% de l'écran*/
     width: 10vw;
+    /*hauteur 10% de l'écran*/
     height: 10vh;
+    /*bordure blanche solid de 1 pixel*/
     border: solid white 1px;
+    /*couleur de background noir*/
     background-color: black;
+    /*couleur de texte blanche*/
     color: white;
 }
 
+/*modification du CSS des objets de class ProfilPictureCadre*/
 .ProfilPictureCadre {
+    /*mode de display inline block*/
     display: inline-block;
+    /*épaisseur 10% de l'écran*/
     width: 10vw;
+    /*hauteur 10% de l'écran*/
     height: 10vh;
+    /*bordure blanche solid de 1 pixel*/
     border: solid white 1px;
+    /*couleur de background noir*/
     background-color: black;
+    /*couleur de texte blanche*/
     color: white;
 }
 
+/*modification du CSS des objets de class ProfilPicture*/
 .ProfilPicture {
+    /*épaisseur 7% de l'écran*/
     max-width: 7vw;
+    /*hauteur 7% de l'écran*/
     max-height: 7vh;
+    /*position relative*/
     position: relative;
 }
+
+/*modification du CSS des objets d'id TabArme*/
 #TabArme {
+    /*marge guauche 42.5 % de l'écran*/
     margin-left:42.5vw;
 }
 
+/*modification du CSS des objets d'id TabClasse*/
 #TabClasse {
+    /*marge guauche 12.5 % de l'écran*/
     margin-left: 12.5vw;
 }
 
+/*modification du CSS des objets d'id TabUnit*/
 #TabUnit {
+    /*marge guauche 27.5 % de l'écran*/
     margin-left: 27.5vw;
 }
 
-#MainFieldset{
-    width:50%;
-    margin-left:25%;
-    text-align:left;
-    background-color:black;
-    color:white;
+/*modification du CSS des objets d'id MainFieldset*/
+#MainFieldset {
+    /*épaisseur 50%*/
+    width: 50%;
+    /*marge guauche 25 % de l'écran*/
+    margin-left: 25%;
+    /*alignement du texte à guauche*/
+    text-align: left;
+    /*couleur de background noir*/
+    background-color: black;
+    /*couleur de texte blanche*/
+    color: white;
 }
 
-input, select{
-    display:block;
-    margin-bottom:1vh;
+/*modification du CSS des objets input et select*/
+input, select {
+    /*mode de display block*/
+    display: block;
+    /*marge basse 1% de l'écran*/
+    margin-bottom: 1vh;
 }
 
-.RadioAndCheck{
-    display:inline;
+/*modification du CSS des objets de class RadioAndCheck*/
+.RadioAndCheck {
+    /*mode de display inline*/
+    display: inline;
 }
 
+/*modification du CSS des objets de class RadioAndCheckOption*/
 .RadioAndCheckOption {
+    /*mode de display block*/
     display: block;
 }
 
-#AnimalPrefere{
-    margin-bottom:1vh;
+/*modification du CSS des objets d'id AnimalPrefere*/
+#AnimalPrefere {
+    /*marge basse 1% de l'écran*/
+    margin-bottom: 1vh;
 }
 
-#Support{
-    margin-bottom:1vh;
+/*modification du CSS des objets d'id Support*/
+#Support {
+    /*marge basse 1% de l'écran*/
+    margin-bottom: 1vh;
 }
 
+/*modification du CSS des objets label*/
 label{
     margin-bottom:5px;
 }
 
-#MainContent{
-    margin-left:10vw;
+/*modification du CSS des objets d'id MainContent*/
+#MainContent {
+    /*marge guauche 10% de l'écran*/
+    margin-left: 10vw;
 }
 
+/*modification du CSS des objets d'id MainContent2*/
 #MainContent2 {
+    /*marge guauche 25% de l'écran*/
     margin-left: 25vw;
 }

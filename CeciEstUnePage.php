@@ -7,9 +7,12 @@
 </head>
 <body>
     <h1>Coucou</h1>
-    
+    <p> clique !</p>
     <?php
         echo $_POST["id"];
+        echo $_GET["id"];
+        echo $_POST["identifiant"];
+        echo $_GET["identifiant"];
         echo $_POST["Name"];
     ?>
 

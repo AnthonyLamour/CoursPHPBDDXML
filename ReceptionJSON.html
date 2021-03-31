@@ -28,66 +28,116 @@
         <a href="AjoutBDDXML.php" class="navLink">Ajout dans une BDD depuis XML</a>
     </nav>
 
+    <!--titre principale de la page-->
     <h1>Réception de JSON</h1>
 
+    <!--div contenant le contenu du fichier JSON dans un tableau-->
     <div id="MainContent">
 
     </div>
 
-
+    <!--script javascript-->
     <script>
+        //récupération du div principale
         var MainContent = document.getElementById("MainContent");
+        //création d'un nouveau tableau HTML
         var newTable = document.createElement("table");
         
+        //création d'une nouvelle requête XMLHttpRequest
         var xhr = new XMLHttpRequest();
+        //url du fichier JSON
         var url = "Unite_JSON.json";
+        //ouverture du fichier JSON en mode POST
         xhr.open("POST", url, true);
         xhr.setRequestHeader("Content-Type", "application/json;charset=utf-8");
+        //fonction appeller lorsque la requête est envoyé
         xhr.onreadystatechange = function () {
+            //si la requête est prête
             if (xhr.readyState === 4 && xhr.status === 200) {
+                //récupération et parsage du résultat en JSON
                 var json = JSON.parse(xhr.responseText);
+                //pour chaque élément du JSON
                 for (var i = 0; i < json.Unites.length; i++) {
+                    //création d'une nouvelle ligne du tableau
                     var newLine = document.createElement("tr");
+                    //création d'une nouvelle colone du tableau
                     var newCol = document.createElement("td");
+                    //set de l'attribut class de la case
                     newCol.setAttribute("class", "ProfilPictureCadre");
+                    //création d'une nouvelle image
                     var newImage = document.createElement("img");
+                    //set de l'attribut class de l'image
                     newImage.setAttribute("class", "ProfilPicture");
+                    //set de l'image
                     newImage.setAttribute("src", json.Unites[i].Profil_Picture);
+                    //ajout de l'image dans la case
                     newCol.appendChild(newImage);
+                    //ajout de la case à la ligne
                     newLine.appendChild(newCol);
+                    //création d'une nouvelle colone du tableau
                     newCol = document.createElement("td");
+                    //set de l'attribut class de la case
                     newCol.setAttribute("class", "TextCadre");
+                    //remplissage de la case
                     newCol.innerHTML = json.Unites[i].Nom;
+                    //ajout de la case à la ligne
                     newLine.appendChild(newCol);
+                    //création d'une nouvelle colone du tableau
                     newCol = document.createElement("td");
+                    //set de l'attribut class de la case
                     newCol.setAttribute("class", "TextCadre");
+                    //remplissage de la case
                     newCol.innerHTML = json.Unites[i].Date_De_Naissance;
+                    //ajout de la case à la ligne
                     newLine.appendChild(newCol);
+                    //création d'une nouvelle colone du tableau
                     newCol = document.createElement("td");
+                    //set de l'attribut class de la case
                     newCol.setAttribute("class", "TextCadre");
+                    //remplissage de la case
                     newCol.innerHTML = json.Unites[i].Nom_classe;
+                    //ajout de la case à la ligne
                     newLine.appendChild(newCol);
+                    //création d'une nouvelle colone du tableau
                     newCol = document.createElement("td");
+                    //set de l'attribut class de la case
                     newCol.setAttribute("class", "TextCadre");
+                    //remplissage de la case
                     newCol.innerHTML = json.Unites[i].Weapon_A;
+                    //ajout de la case à la ligne
                     newLine.appendChild(newCol);
+                    //création d'une nouvelle colone du tableau
                     newCol = document.createElement("td");
+                    //set de l'attribut class de la case
                     newCol.setAttribute("class", "TextCadre");
+                    //remplissage de la case
                     newCol.innerHTML = json.Unites[i].Weapon_B;
+                    //ajout de la case à la ligne
                     newLine.appendChild(newCol);
+                    //création d'une nouvelle colone du tableau
                     newCol = document.createElement("td");
+                    //set de l'attribut class de la case
                     newCol.setAttribute("class", "TextCadre");
+                    //remplissage de la case
                     newCol.innerHTML = json.Unites[i].Weapon_C;
+                    //ajout de la case à la ligne
                     newLine.appendChild(newCol);
+                    //création d'une nouvelle colone du tableau
                     newCol = document.createElement("td");
+                    //set de l'attribut class de la case
                     newCol.setAttribute("class", "TextCadre");
+                    //remplissage de la case
                     newCol.innerHTML = json.Unites[i].Max_Level;
+                    //ajout de la case à la ligne
                     newLine.appendChild(newCol);
+                    //ajout de la ligne au tableau
                     newTable.appendChild(newLine);
                 }
+                //ajout du tableau dans le div
                 MainContent.appendChild(newTable);
             }
         };
+        //envoie de la requête
         xhr.send();
     </script>
 

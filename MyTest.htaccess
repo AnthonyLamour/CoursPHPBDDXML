@@ -1,0 +1,8 @@
+
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
+
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+RewriteRule "^CettePage-([0-9]+)-([0-9]+).php" "/CeciEstUnePage.php?id=$1&identifiant=$2" [L]

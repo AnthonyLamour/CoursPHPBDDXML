@@ -28,80 +28,136 @@
         <a href="AjoutBDDXML.php" class="navLink">Ajout dans une BDD depuis XML</a>
     </nav>
 
+    <!--titre principale de la page-->
     <h1>Création de JSON depuis du javascript</h1>
 
+    <!--fieldset contenant le formulaire de la page-->
     <fieldset id="MainFieldset">
+        <!--légende du formulaire-->
         <legend>
             Formulaire de test JSON
         </legend>
+        <!--formulaire de la page-->
         <form id="MainFormulaire" method="GET" action="ReceptionJSON">
+            <!--label de l'input prénom-->
             <label for="Prenom">Prénom :</label>
+            <!--input prénom-->
             <input type="text" id="Prenom" placeholder="Prénom" required />
+            <!--label de l'input nom-->
             <label for="Nom">Nom :</label>
+            <!--input nom-->
             <input type="text" id="Nom" placeholder="NOM" required />
+            <!--label de l'input email-->
             <label for="Email">Email :</label>
+            <!--input email-->
             <input type="email" id="Email" placeholder="prenom.nom@mail.com" required />
+            <!--label de l'input date de naissance-->
             <label for="DateDeNaissance">Date de naissance :</label>
+            <!--input date de naissance-->
             <input type="date" id="DateDeNaissance" required />
+            <!--label de l'input age-->
             <label for="Age">Age :</label>
+            <!--input age-->
             <input type="number" id="Age" placeholder="18" required />
+            <!--label de l'input animal préféré-->
             <label for="AnimalPrefere">Animal préféré :</label>
+            <!--input animal préféré-->
             <div id="AnimalPrefere">
+                <!--radio bouton chien-->
                 <div class="RadioAndCheckOption">
+                    <!--input chien-->
                     <input type="radio" id="Chien" name="AnimalPrefereChoisi" value="Chien" class="RadioAndCheck" checked />
+                    <!--label de l'input chien-->
                     <label for="Chien">Chien</label>
                 </div>
+                <!--radio bouton chat-->
                 <div class="RadioAndCheckOption">
+                    <!--input chat-->
                     <input type="radio" id="Chat" name="AnimalPrefereChoisi" value="Chat" class="RadioAndCheck" />
+                    <!--label de l'input chat-->
                     <label for="Chat">Chat</label>
                 </div>
+                <!--radio bouton poisson-->
                 <div class="RadioAndCheckOption">
+                    <!--input poisson-->
                     <input type="radio" id="Poisson" name="AnimalPrefereChoisi" value="Poisson" class="RadioAndCheck" />
+                    <!--label de l'input poisson-->
                     <label for="Poisson">Poisson</label>
                 </div>
             </div>
+            <!--label de l'input couleur préférée-->
             <label for="CouleurPreferee">Couleur préférée :</label>
+            <!--input couleur préférée-->
             <select id="CouleurPreferee">
+                <!--input vert-->
                 <option value="Vert">Vert</option>
+                <!--input rouge-->
                 <option value="Rouge">Rouge</option>
+                <!--input jaune-->
                 <option value="Jaune">Jaune</option>
+                <!--input bleu-->
                 <option value="Bleu">Bleu</option>
             </select>
+            <!--label de l'input support possédés-->
             <label for="Support">Support possédé(s) :</label><br />
+            <!--input support-->
             <div id="Support">
+                <!--checkbox PC-->
                 <div class="RadioAndCheckOption">
+                    <!--input PC-->
                     <input type="checkbox" id="PC" class="RadioAndCheck" value="PC" checked />
+                    <!--label de l'input PC-->
                     <label for="PC">PC</label>
                 </div>
+                <!--checkbox portable-->
                 <div class="RadioAndCheckOption">
+                    <!--input portable-->
                     <input type="checkbox" id="Portable" value="Portable" class="RadioAndCheck" />
+                    <!--label de l'input portable-->
                     <label for="Portable">Portable</label>
                 </div>
+                <!--checkbox playstation-->
                 <div class="RadioAndCheckOption">
+                    <!--input playstation-->
                     <input type="checkbox" id="Playstation" value="Playstation" class="RadioAndCheck" />
+                    <!--label de l'input playstation-->
                     <label for="Playstation">Playstation</label>
                 </div>
+                <!--checkbox xbox-->
                 <div class="RadioAndCheckOption">
+                    <!--input xbox-->
                     <input type="checkbox" id="Xbox" value="Xbox" class="RadioAndCheck" />
+                    <!--label de l'input xbox-->
                     <label for="Xbox">Xbox</label>
                 </div>
+                <!--checkbox nintendo-->
                 <div class="RadioAndCheckOption">
+                    <!--input nintendo-->
                     <input type="checkbox" id="Nintendo" value="Nintendo" class="RadioAndCheck" />
+                    <!--label de l'input nintendo-->
                     <label for="Nintendo">Nintendo</label>
                 </div>
             </div>
+            <!--bouton permettant de valider le formulaire-->
             <input type="button" id="Envoi" value="Valider" onclick="GenerateJSON()" />
         </form>
     </fieldset>
 
 
     <script>
+        //fonction appeller au click du bouton
         function GenerateJSON() {
-            var Nom=document.getElementById("Nom").value;
-            var Prenom=document.getElementById("Prenom").value;
-            var Email=document.getElementById("Email").value;
-            var DateDeNaissance=document.getElementById("DateDeNaissance").value;
-            var Age=document.getElementById("Age").value;
+            //récupération de la valeur de nom
+            var Nom = document.getElementById("Nom").value;
+            //récupération de la valeur de prénom
+            var Prenom = document.getElementById("Prenom").value;
+            //récupération de la valeur de email
+            var Email = document.getElementById("Email").value;
+            //récupération de la valeur de date de naissance
+            var DateDeNaissance = document.getElementById("DateDeNaissance").value;
+            //récupération de la valeur de age
+            var Age = document.getElementById("Age").value;
+            //récupération de la valeur de animal préféré
             var AnimalPrefere;
             if(document.getElementById("Chien").checked){
                 AnimalPrefere=document.getElementById("Chien").value;
@@ -112,7 +168,9 @@
             else if(document.getElementById("Poisson").checked){
                 AnimalPrefere=document.getElementById("Poisson").value;
             }
-            var CouleurPreferee=document.getElementById("CouleurPreferee").value;
+            //récupération de la valeur de couleur préféré
+            var CouleurPreferee = document.getElementById("CouleurPreferee").value;
+            //récupération de la valeur de support
             var Support= new Array;
             if(document.getElementById("PC").checked){
                 Support.push(document.getElementById("PC").value);
@@ -129,13 +187,18 @@
             if(document.getElementById("Nintendo").checked){
                 Support.push(document.getElementById("Nintendo").value);
             }
+            //création du début de l'objet JSON sous forme de chaine
             var Personne = '{ "Personne" : [' +
                            '{ "Nom":"' + Nom + '","Prenom":"' + Prenom + '","Email":"' + Email + '","DateDeNaissance":"' + DateDeNaissance + '","Age":"' + Age + '","AnimalPrefere":"' + AnimalPrefere + '","CouleurPreferee":"' + CouleurPreferee + '"';
+            //ajout des supports dans le JSON
             for (var i = 0; i < Support.length; i++) {
                 Personne = Personne + ',"Support' + (i+1) + '":"' + Support[i] + '"';
             }
+            //finalisation de la chaine de l'objet JSON
             Personne = Personne + '}]}';
+            //parsage de la chaine en objet JSON
             var PersonneJSON = JSON.stringify(Personne);
+            //affichage de l'objet JSON
             console.log(PersonneJSON);
 
         }

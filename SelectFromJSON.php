@@ -28,14 +28,20 @@
         <a href="AjoutBDDXML.php" class="navLink">Ajout dans une BDD depuis XML</a>
     </nav>
 
+	<!--titre principale de la page-->
     <h1>Création de JSON depuis du javascript</h1>
 
+	<!--fieldset contenant le Formulaire de la page-->
     <fieldset id="MainFieldset">
-        <legend>
+        <!--légende du Formulaire-->
+		<legend>
             Formulaire de test JSON
         </legend>
+		<!--Formulaire de la page-->
         <form id="MainFormulaire" method="GET">
+			<!--label du select d'arme-->
             <label for="SelectedWeapon">Choisissez une arme :</label>
+			<!--select d'arme-->
             <select id="SelectedWeapon">
                 <?php
                     //nom du serveur
@@ -74,57 +80,96 @@
 	                //connexion à la BDD
 	                $conn = ConnecServ();
                     
+					//création de la requête sql permettant de récupérer les armes-->
                     $sql = "SELECT * FROM ARME";
+					//pour chaque résultat
                     foreach($conn->query($sql) as $Arme){
-                        echo '<option value = "'.$Arme["NOMARME"].'">'.$Arme["NOMARME"].'</option>';
+                        //ajout d'une option du select
+						echo '<option value = "'.$Arme["NOMARME"].'">'.$Arme["NOMARME"].'</option>';
                     }
                 ?>
             </select>
+			<!--bouton permettant de valider le Formulaire-->
             <input type="button" id="Envoi" value="Valider" onclick="InterrogerBDD()" />
         </form>
     </fieldset>
 
     <br/>
+	<!--div contenant le résultat de la requête sql-->
     <div id="MainContent2">
 
     </div>
 
+	<!--script javascript-->
     <script>
+		//variable permettant de récupérer le div de résultat
         var MainContent = document.getElementById("MainContent2");
-
+		//fonction appeller au click sur le bouton
         function InterrogerBDD() {
+			//reset du div de résultat
             MainContent.innerHTML="";
+			//création d'un nouveau tableau HTML
             var newTable = document.createElement("table");
+			//création de l'objet JSON
             var SELECTEDWEAPON={"SELECTEDWEAPON": document.getElementById("SelectedWeapon").value};
-            var dbParam = JSON.stringify(SELECTEDWEAPON);
+            //convertion de l'objet JSON en chaine pour le passer en paramètre
+			var dbParam = JSON.stringify(SELECTEDWEAPON);
+			//création d'une requête XMLHttpRequest
             var xhttp = new XMLHttpRequest();
+			//lorsque la requête est envoyé
             xhttp.onreadystatechange = function () {
+				//si la requête est prête
                 if (this.readyState == 4 && this.status == 200) {
+					//récupération et parsage du résultat en JSON
                     var json = JSON.parse(this.responseText);
-                    for (var i = 0; i < json.length; i++) {
+                    //pour chaque élément du JSON
+					for (var i = 0; i < json.length; i++) {
+						//création d'une nouvelle ligne du tableau
                         var newLine = document.createElement("tr");
+						//création d'une nouvelle colone du tableau
                         var newCol = document.createElement("td");
+						//set de l'attribut class de la case
                         newCol.setAttribute("class", "TextCadre");
+						//remplissage de la case
                         newCol.innerHTML = json[i].NOMCLASSE;
+						//ajout de la case dans la ligne
                         newLine.appendChild(newCol);
+						//création d'une nouvelle colone du tableau
                         newCol = document.createElement("td");
+						//set de l'attribut class de la case
                         newCol.setAttribute("class", "TextCadre");
+						//remplissage de la case
                         newCol.innerHTML = json[i].WEAPON_A;
+						//ajout de la case dans la ligne
                         newLine.appendChild(newCol);
+						//création d'une nouvelle colone du tableau
                         newCol = document.createElement("td");
+						//set de l'attribut class de la case
                         newCol.setAttribute("class", "TextCadre");
+						//remplissage de la case
                         newCol.innerHTML = json[i].WEAPON_B;
+						//ajout de la case dans la ligne
                         newLine.appendChild(newCol);
+						//création d'une nouvelle colone du tableau
                         newCol = document.createElement("td");
+						//set de l'attribut class de la case
                         newCol.setAttribute("class", "TextCadre");
+						//remplissage de la case
                         newCol.innerHTML = json[i].WEAPON_C;
+						//ajout de la case dans la ligne
                         newLine.appendChild(newCol);
+						//création d'une nouvelle colone du tableau
                         newCol = document.createElement("td");
+						//set de l'attribut class de la case
                         newCol.setAttribute("class", "TextCadre");
+						//remplissage de la case
                         newCol.innerHTML = json[i].MAX_LEVEL;
+						//ajout de la case dans la ligne
                         newLine.appendChild(newCol);
+						//ajout de la ligne dans le tableau
                         newTable.appendChild(newLine);
                     }
+					//ajout du tableau dans le div
                     MainContent.appendChild(newTable);
                 }
             };
